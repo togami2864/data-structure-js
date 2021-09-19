@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "node": "./node_modules/.bin/ts-node"
+    "node": "node --require esbuild-register"
   },
   "keywords": [],
   "author": "",
@@ -12,5 +12,9 @@
   "dependencies": {
     "ts-node": "^10.2.1",
     "typescript": "^4.4.3"
+  },
+  "devDependencies": {
+    "esbuild": "^0.12.28",
+    "esbuild-register": "^3.0.0"
   }
 }
