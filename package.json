@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "node": "node --require esbuild-register",
-    "test": "jest"
+    "test": "jest ./tests/*"
   },
   "keywords": [],
   "author": "",

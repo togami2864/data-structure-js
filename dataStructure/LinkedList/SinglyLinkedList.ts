@@ -4,6 +4,10 @@ export class SinglyLinkedList<T> {
   public isEmpty() {
     return this.head === null;
   }
+  public clear() {
+    this.head = null;
+    this.tail = null;
+  }
   public addToTail(data: T) {
     // time complexity O(1)
     if (this.isEmpty()) {
@@ -60,7 +64,7 @@ export class SinglyLinkedList<T> {
   }
 }
 
-class ListNode<T> {
+export class ListNode<T> {
   data: T;
   next: ListNode<T>;
   constructor(data: T, next: ListNode<T>) {
