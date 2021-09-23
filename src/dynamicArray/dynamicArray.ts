@@ -1,3 +1,4 @@
+// need refactoring
 export class dynamicArray<T> {
   private array: T[] | null;
   private size: number = 0;
