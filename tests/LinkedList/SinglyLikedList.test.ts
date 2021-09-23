@@ -1,7 +1,7 @@
 import {
   SinglyLinkedList,
   ListNode,
-} from "../../dataStructure/LinkedList/SinglyLinkedList";
+} from "../../src/LinkedList/SinglyLinkedList";
 
 describe("Data Structure: Singly Linked List", () => {
   const LinkedList = new SinglyLinkedList();
