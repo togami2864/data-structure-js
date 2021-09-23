@@ -1,20 +1,29 @@
-export class Stack<T> {
-  top: number = -1;
-  values = [];
-  public isEmpty() {
-    return this.top === -1;
+interface StackInterface<T> {
+  // util
+  isEmpty(): boolean;
+  // primary
+  push(data: T);
+  pop(): T;
+}
+
+export class Stack<T> implements StackInterface<T> {
+  values: T[];
+  constructor() {
+    this.values = [];
   }
-  public push(value: T) {
+  public isEmpty() {
+    return this.values.length === 0;
+  }
+
+  public push(data: T) {
     // time complexity O(1)
-    this.top += 1;
-    this.values[this.top] = value;
+    this.values.push(data);
   }
   public pop() {
     // time complexity O(1)
     if (this.isEmpty()) throw new Error("Under Flow");
-    const value = this.values[this.top];
-    this.top -= 1;
-    this.values = this.values.slice(0, this.top + 1);
+    const value = this.values[this.values.length - 1];
+    this.values.splice(this.values.length - 1);
     return value;
   }
 }
@@ -28,3 +37,4 @@ stack.pop();
 console.log(stack);
 stack.pop();
 console.log(stack);
+stack.pop();
