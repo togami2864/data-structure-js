@@ -52,6 +52,7 @@ export class Heap implements HeapInterface {
   }
 
   heapifyUp() {
+    // time complexity O(lgn)
     let current = this.data.length - 1;
 
     while (this.data[current] > this.data[this.parent(current)]) {
@@ -69,6 +70,7 @@ export class Heap implements HeapInterface {
   }
 
   heapifyDown() {
+    //// time complexity O(lgn)
     let current = 0;
     while (this.data[this.left(current)] !== undefined) {
       let biggestChild = this.left(current);
